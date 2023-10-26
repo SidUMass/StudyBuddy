@@ -12,7 +12,7 @@ function Home() {
         <Box paddingLeft="100px">
             {/* Logo and Name */}
             <Box width="50%">
-                <Text fontSize ='58px' color='#e91e63' marginBottom="30px" style={{ lineHeight: '1.2' }}>
+                <Text fontSize ='58px' color='#E66F7B' marginBottom="30px" style={{ lineHeight: '1.2' }}>
                     Connect with other students from your class!
                 </Text>
                 <Text fontSize ='20px' color='grey' marginBottom="10px">
@@ -60,7 +60,7 @@ function Home() {
             <Box width="70%"pb="200px">
             <Flex align="center">
             <Input placeholder="Enter your Email Here" size="lg" style={{ background: 'white' }} />
-            <Button colorScheme="red"size="lg">Submit</Button>
+            <Button bg="#E66F7B" color="white"size="lg">Submit</Button>
             </Flex>
             </Box>
             

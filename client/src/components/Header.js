@@ -21,7 +21,7 @@ function Header() {
         </nav>
 
         {/* Login Button */}
-        <Button colorScheme="red">Login</Button>
+        <Button bg="#E66F7B"color={'white'}>Login</Button>
     </header>
   );
 }
