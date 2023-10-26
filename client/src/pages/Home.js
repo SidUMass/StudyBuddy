@@ -6,7 +6,7 @@ import { Input } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 import { Flex } from '@chakra-ui/react'
 
-function Body() {
+function Home() {
   return (
     <body className="App-Body">
         <Box paddingLeft="100px">
@@ -70,4 +70,4 @@ function Body() {
   );
 }
 
-export default Body;
+export default Home;

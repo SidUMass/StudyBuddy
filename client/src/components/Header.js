@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../logo.svg';
 import { Button } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -13,9 +14,9 @@ function Header() {
         {/* Navigation */}
         <nav>
         <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/course">Course</a></li>
-            <li><a href="/profile">Profile</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/courses">Course</Link></li>
+          <li><Link to="/profile">Profile</Link></li>
         </ul>
         </nav>
 
