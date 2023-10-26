@@ -1,5 +1,5 @@
 import React from 'react';
-
+import logo from '../logo.svg';
 import { Button } from "@chakra-ui/react";
 
 function Header() {
@@ -7,7 +7,7 @@ function Header() {
     <header className="App-header">
         {/* Logo and Name */}
         <div className="logo-section">
-        <img src="logo.svg" alt="StudyBuddy Logo" className="App-logo" />
+        <img src={logo} alt="StudyBuddy Logo" className="App-logo" />
         <h1>StudyBuddy</h1>
         </div>
 
