@@ -8,7 +8,6 @@ function Header() {
         {/* Logo and Name */}
         <div className="logo-section">
         <img src={logo} alt="StudyBuddy Logo" className="App-logo" />
-        <h1>StudyBuddy</h1>
         </div>
 
         {/* Navigation */}
