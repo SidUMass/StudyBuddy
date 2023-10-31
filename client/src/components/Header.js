@@ -75,7 +75,7 @@ const MenuLinks = ({ isOpened }) => {
 
 function Header() {
   const [isOpened, setIsOpened] = useState(false);
-  const toggle = () => setIsOpened(wasOpened => !isOpened);
+  const toggle = () => setIsOpened(isOpened => !isOpened);
   return (
     <header className="App-header">
         <Logo />

@@ -1,40 +1,67 @@
 import React from 'react';
 
-import { Button } from "@chakra-ui/react";
+import { Button, ring } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Input } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 import { Flex } from '@chakra-ui/react'
 
 import { ReactComponent as Fellas } from "../images/fellas.svg";
-
+import { useState, useEffect } from 'react';
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+  
+function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  
+    useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
+    return windowDimensions;
+  }
+  
 function Home() {
+    let { height, width } = useWindowDimensions();
   return (
     <body className="App-Body">
         <Box paddingLeft="100px">
-            <Flex >
+            <Flex alignItems={width >= 1168 ? "flex-start" : "center"} justifyContent="center">
                 {/* Left Side Banner */}
-                <Box width="40%" paddingTop="120px">
-                    <Text fontSize ='58px' color='#E66F7B' marginBottom="30px" style={{ lineHeight: '1.2' }}>
-                        Connect with other students from your class!
-                    </Text>
-                    <Text fontSize ='20px' color='grey' marginBottom="10px">
-                        Click on a button to get started!
-                    </Text>
+                <Box width="50%" paddingTop="120px" paddingLeft="0">
+                    {/* <Flex direction="column" alignItems={width >= 1168 ? "flex-start" : "center"} justifyContent="center"> */}
+                        <Text fontSize ='58px' color='#E66F7B' marginBottom="30px" style={{ lineHeight: '1.2' }}>
+                            Connect with other students from your class!
+                        </Text>
+                        <Text fontSize ='20px' color='grey' marginBottom="10px">
+                            Click on a button to get started!
+                        </Text>
 
-                    {/* Buttons */}
-                    <div style={{ display: 'flex', gap: '10px' }}>
-                        <Button colorScheme="blue">Join a Study Group</Button>
-                        <Button colorScheme="blue"variant="outline">Learn More</Button>
-                    </div>
+                        {/* Buttons */}
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                            {width >= 550 ? <Button colorScheme="blue" whiteSpace='normal'>Join a Study Group</Button> : <Button colorScheme="blue" whiteSpace='normal'>Join a Group</Button>}
+                            {/* <Button colorScheme="blue" whiteSpace='normal'>Join a Study Group</Button> */}
+                            <Button colorScheme="blue"variant="outline" whiteSpace='normal'>Learn More</Button>
+                        </div>
+                    {/* </Flex> */}
                 </Box>
 
                 {/* Right Side Banner */}
-                <Box width="50%" paddingLeft="100px">
-                    <Fellas />
+                <Box width="50%" marginLeft="auto">
+                    {width >= 1168 && <Fellas />}
                 </Box>
             </Flex>
-
+            <Flex direction="column" alignItems="center" justifyContent="center">
             {/* Featured courses */}
             <div className="App-Body-Featured">
             <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="400px">
@@ -66,14 +93,15 @@ function Home() {
                 your educational journey with the world. <br />We can't wait to see what you bring to the table!
             </Text>
 
-            <Box width="70%"pb="200px">
-            <Flex align="center">
+            <Box pb="200px">
+            <Flex alignItems="center" justifyContent="center">
             <Input placeholder="Enter your Email Here" size="lg" style={{ background: 'white' }} />
             <Button bg="#E66F7B" color="white"size="lg">Submit</Button>
             </Flex>
             </Box>
             
             </div>
+            </Flex>
         </Box>
     </body>
   );
