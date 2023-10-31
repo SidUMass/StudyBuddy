@@ -6,25 +6,34 @@ import { Input } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 import { Flex } from '@chakra-ui/react'
 
+import { ReactComponent as Fellas } from "../images/fellas.svg";
+
 function Home() {
   return (
     <body className="App-Body">
         <Box paddingLeft="100px">
-            {/* Logo and Name */}
-            <Box width="50%">
-                <Text fontSize ='58px' color='#E66F7B' marginBottom="30px" style={{ lineHeight: '1.2' }}>
-                    Connect with other students from your class!
-                </Text>
-                <Text fontSize ='20px' color='grey' marginBottom="10px">
-                    Click on a button to get started!
-                </Text>
+            <Flex >
+                {/* Left Side Banner */}
+                <Box width="40%" paddingTop="120px">
+                    <Text fontSize ='58px' color='#E66F7B' marginBottom="30px" style={{ lineHeight: '1.2' }}>
+                        Connect with other students from your class!
+                    </Text>
+                    <Text fontSize ='20px' color='grey' marginBottom="10px">
+                        Click on a button to get started!
+                    </Text>
 
-                {/* Buttons */}
-                <div style={{ display: 'flex', gap: '10px' }}>
-                <Button colorScheme="blue">Join a Study Group</Button>
-                <Button colorScheme="blue"variant="outline">Learn More</Button>
-                </div>
-            </Box>
+                    {/* Buttons */}
+                    <div style={{ display: 'flex', gap: '10px' }}>
+                        <Button colorScheme="blue">Join a Study Group</Button>
+                        <Button colorScheme="blue"variant="outline">Learn More</Button>
+                    </div>
+                </Box>
+
+                {/* Right Side Banner */}
+                <Box width="50%" paddingLeft="100px">
+                    <Fellas />
+                </Box>
+            </Flex>
 
             {/* Featured courses */}
             <div className="App-Body-Featured">
