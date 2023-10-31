@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #282c34;
+  background-color: #2F2A36;
   padding: 10px 20px;
 }
 
@@ -20,29 +20,18 @@
   display: flex;
   list-style-type: none;
   gap: 20px;
+  padding-left: 800px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: white;
 }
-
-.login-btn {
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
+.nav-links :hover {
+  text-decoration: none;
+  color: #E66F7B;
 }
 
-.login-btn:hover {
-  background-color: #d81b60;
-}
 .App-Body{
   background-color: #2F2A36;
-}
-.Body-Title-Section{
-  color: #e91e63;
-  font-size: 40px;
 }

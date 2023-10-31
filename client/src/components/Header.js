@@ -1,27 +1,86 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import {useState} from 'react';
+import { Box, Text, Button, Stack } from "@chakra-ui/react";
+import {ReactComponent as Logo} from "../logo.svg";
 
-import { Button } from "@chakra-ui/react";
+const CloseIcon = () => (
+  <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+    <title>Close</title>
+    <path
+      fill="white"
+      d="M9.00023 7.58599L13.9502 2.63599L15.3642 4.04999L10.4142 8.99999L15.3642 13.95L13.9502 15.364L9.00023 10.414L4.05023 15.364L2.63623 13.95L7.58623 8.99999L2.63623 4.04999L4.05023 2.63599L9.00023 7.58599Z"
+    />
+  </svg>
+);
+
+const MenuIcon = () => (
+  <svg
+    width="24px"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="white"
+  >
+    <title>Menu</title>
+    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+  </svg>
+);
+
+const MenuToggle = ({ toggle, isOpened }) => {
+  return (
+    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+      {isOpened ? <CloseIcon /> : <MenuIcon />}
+    </Box>
+  );
+};
+
+
+const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
+  return (
+    <Link to={to}>
+      <Text display="block" color={"white"} {...rest}>
+        {children}
+      </Text>
+    </Link>
+  );
+};
+
+const MenuLinks = ({ isOpened }) => {
+  return (
+    <Box display={{ base: isOpened ? "block" : "none", md: "block" }} 
+    flexBasis={{ base: "100%", md: "auto" }}>
+      <Stack spacing={8} align="center" justify={["center", "space-between", "flex-end", "flex-end"]}
+      direction={["column", "row", "row", "row"]} pt={[4, 4, 0, 0]}>
+        <MenuItem to="/">Home</MenuItem>
+        <MenuItem to="/courses"> Courses </MenuItem>
+        <MenuItem to="/profile"> Profile </MenuItem>
+        <MenuItem to="/login" isLast>
+          <Button
+            size="sm"
+            rounded="lg"
+            color={["primary.500", "primary.500", "white", "white"]}
+            bg="#E66F7B"
+            _hover={{
+              bg: "#422023"
+            }}
+          >
+            Login
+          </Button>
+        </MenuItem>
+      </Stack>
+    </Box>
+  );
+};
+
 
 function Header() {
+  const [isOpened, setIsOpened] = useState(false);
+  const toggle = () => setIsOpened(wasOpened => !isOpened);
   return (
     <header className="App-header">
-        {/* Logo and Name */}
-        <div className="logo-section">
-        <img src="logo.svg" alt="StudyBuddy Logo" className="App-logo" />
-        <h1>StudyBuddy</h1>
-        </div>
-
-        {/* Navigation */}
-        <nav>
-        <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/course">Course</a></li>
-            <li><a href="/profile">Profile</a></li>
-        </ul>
-        </nav>
-
-        {/* Login Button */}
-        <Button colorScheme="red">Login</Button>
+        <Logo />
+        <MenuToggle toggle={toggle} isOpened={isOpened} />
+        <MenuLinks isOpened={isOpened} />
     </header>
   );
 }
