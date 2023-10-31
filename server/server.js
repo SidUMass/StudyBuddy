@@ -11,7 +11,7 @@ const pool = new Pool({
   host: 'your_host',
   database: 'your_database',
   password: 'your_password',
-  port: 5432, // Replace with your PostgreSQL port
+  port: 5432
 });
 
 pool.connect()
