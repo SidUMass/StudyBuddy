@@ -2,7 +2,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt'); 
 // using bcrypt for now to hash the user's password
-const { Pool } = require('pg')();
+const { Pool } = require('pg');
 // usin g pg promise for postgres here
 
 const app = express();
