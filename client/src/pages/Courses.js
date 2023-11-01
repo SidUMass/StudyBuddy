@@ -33,15 +33,15 @@ function Courses() {
         </Box>
       </Flex>
       
-      <Box backgroundColor='#3C3546' marginLeft="20px" paddingRight="20px">
-        <Text align='left' fontSize='20px' color='white' paddingTop="30px" marginTop="50px" marginBottom="20px" style={{ lineHeight: '1.2' }}>
+      <Box backgroundColor='#3C3546'>
+        <Text align='left' fontSize='20px' color='white'  marginLeft="20px" marginRight="20px" paddingTop="30px" marginTop="50px" marginBottom="20px" style={{ lineHeight: '1.2' }}>
             Welcome to your courses!
         </Text>
-        <Text align='left' fontSize='16px' color='white' marginBottom="20px" style={{ lineHeight: '1.2' }}>
+        <Text align='left' fontSize='16px' color='white'  marginLeft="20px" marginRight="20px" marginBottom="20px" style={{ lineHeight: '1.2' }}>
             Course Overview
         </Text>
-        <Input placeholder="Search..." size="sm" borderRadius="15px" marginBottom="30px" maxWidth="300px"/>
-        <Flex direction='row' align='center' justifyContent='center' flexWrap='wrap'>
+        <Input placeholder="Search..." size="sm"  marginLeft="20px" marginRight="20px" borderRadius="15px" marginBottom="30px" maxWidth="300px"/>
+        <Flex direction='row' align='center' justifyContent='center' flexWrap='wrap'  marginLeft="20px" marginRight="20px">
           <Box flex="1" backgroundColor="white">
           <Box margin="10px">
             <Image src='./images/download.jpeg' alt="Image 1" marginBottom="10px" />
