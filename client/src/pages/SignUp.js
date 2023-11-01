@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Box, Input, Button, FormLabel, FormControl, Text } from "@chakra-ui/react";
+
 function SignUp() {
   const [formData, setFormData] = useState({
     username: '',
@@ -40,43 +42,48 @@ function SignUp() {
   }
 
   return (
-    <div className="signup-container">
-      <h2>Sign Up</h2>
-      <form onSubmit={handleRegistration}>
-        <div className="input-group">
-          <label>Username:</label>
-          <input 
-            type="text" 
-            name="username"
-            placeholder="Username" 
-            value={formData.username} 
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="input-group">
-          <label>Email:</label>
-          <input 
-            type="email" 
-            name="email"
-            placeholder="Email" 
-            value={formData.email} 
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="input-group">
-          <label>Password:</label>
-          <input 
-            type="password" 
-            name="password"
-            placeholder="Password" 
-            value={formData.password} 
-            onChange={handleInputChange}
-          />
-        </div>
-        <button type="submit">Register</button>
-      </form>
-      {message && <p>{message}</p>}
-    </div>
+    <Box className="signup-container">
+      <Box width="50%" >
+        <Text fontSize="2xl" mb={4}>Sign Up</Text>
+        <form onSubmit={handleRegistration}>
+          <FormControl className="input-group" mb={4}>
+            <FormLabel>Username:</FormLabel>
+            <Input
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={formData.username}
+              onChange={handleInputChange}
+            />
+          </FormControl>
+          
+          <FormControl className="input-group" mb={4}>
+            <FormLabel>Email:</FormLabel>
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleInputChange}
+            />
+          </FormControl>
+          
+          <FormControl className="input-group" mb={4}>
+            <FormLabel>Password:</FormLabel>
+            <Input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleInputChange}
+            />
+          </FormControl>
+          
+          <Button type="submit" colorScheme="blue">Register</Button>
+        </form>
+        {message && <Text mt={4}>{message}</Text>}
+      </Box>
+    </Box>
   );
 }
 

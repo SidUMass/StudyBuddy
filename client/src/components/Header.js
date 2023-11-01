@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {useState} from 'react';
 import { Box, Text, Button, Stack } from "@chakra-ui/react";
 import {ReactComponent as Logo} from "../logo.svg";
@@ -45,7 +45,10 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   );
 };
 
+
+
 const MenuLinks = ({ isOpened }) => {
+  const location = useLocation();
   return (
     <Box display={{ base: isOpened ? "block" : "none", md: "block" }} 
     flexBasis={{ base: "100%", md: "auto" }}>
@@ -67,6 +70,7 @@ const MenuLinks = ({ isOpened }) => {
             Login
           </Button>
         </MenuItem>
+        
       </Stack>
     </Box>
   );

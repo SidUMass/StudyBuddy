@@ -35,7 +35,7 @@ function Home() {
     let { height, width } = useWindowDimensions();
   return (
     <body className="App-Body">
-        <Box paddingLeft="100px">
+        <Box paddingLeft="50px">
             <Flex alignItems={width >= 1168 ? "flex-start" : "center"} justifyContent="center">
                 {/* Left Side Banner */}
                 <Box width="50%" paddingTop="120px" paddingLeft="0">
@@ -63,8 +63,9 @@ function Home() {
             </Flex>
             <Flex direction="column" alignItems="center" justifyContent="center">
             {/* Featured courses */}
+
             <div className="App-Body-Featured">
-            <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="400px">
+            <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="100px">
                 Featured Courses
             </Text>
 
@@ -80,29 +81,31 @@ function Home() {
             <Text fontSize ='20px' color='grey'marginBottom="10px">
                 Check out our Reviews below
             </Text>
-
-
-            <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="400px"textAllign="center"marginLeft="300px">
+            </div>
+            
+            <Box pb="100px"marginRight={"60px"}>
+            <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="400px"textAllign="center"marginLeft={"350px"}>
                 JOIN US!
             </Text>
-
-            <Text fontSize ='16px' color='grey'marginBottom="100px"textAllign="center">
+           
+            <Text fontSize ='16px' color='grey'marginBottom="20px"textAllign="center">
                 Want to join our platform? By entering your email address below, you'll gain 
                 access to an exclusive<br /> opportunity to manage and showcase your college courses.
                 Take advantage of our platform's powerful<br /> features to organize, promote, and share
                 your educational journey with the world. <br />We can't wait to see what you bring to the table!
             </Text>
-
-            <Box pb="200px">
+            
+            
             <Flex alignItems="center" justifyContent="center">
             <Input placeholder="Enter your Email Here" size="lg" style={{ background: 'white' }} />
             <Button bg="#E66F7B" color="white"size="lg">Submit</Button>
             </Flex>
             </Box>
             
-            </div>
+            
             </Flex>
         </Box>
+        
     </body>
   );
 }
