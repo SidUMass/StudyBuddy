@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Courses from './pages/Courses';
 import Profile from './pages/Profile';
+import SignUp from './pages/SignUp';
 
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
           <Footer /> 
         </div>

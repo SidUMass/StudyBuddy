@@ -54,7 +54,7 @@ const MenuLinks = ({ isOpened }) => {
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/courses"> Courses </MenuItem>
         <MenuItem to="/profile"> Profile </MenuItem>
-        <MenuItem to="/login" isLast>
+        <MenuItem to="/signup" isLast>
           <Button
             size="sm"
             rounded="lg"
