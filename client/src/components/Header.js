@@ -54,12 +54,10 @@ const MenuLinks = ({ isOpened }) => {
     flexBasis={{ base: "100%", md: "auto" }}>
       <Stack spacing={8} align="center" justify={["center", "space-between", "flex-end", "flex-end"]}
       direction={["column", "row", "row", "row"]} pt={[4, 4, 0, 0]}>
-        
-        <MenuItem to="/"  textDecoration={location.pathname === '/profile' ? 'underline' : 'none'}>Home</MenuItem>
-        <MenuItem to="/courses"  textDecoration={location.pathname === '/profile' ? 'underline' : 'none'}> Courses </MenuItem>
-        <MenuItem to="/profile" textDecoration={location.pathname === '/profile' ? 'underline' : 'none'}> Profile </MenuItem>
-        <MenuItem to="/login"  textDecoration={location.pathname === '/profile' ? 'underline' : 'none'} isLast>
-        
+        <MenuItem to="/">Home</MenuItem>
+        <MenuItem to="/courses"> Courses </MenuItem>
+        <MenuItem to="/profile"> Profile </MenuItem>
+        <MenuItem to="/login" isLast>
           <Button
             size="sm"
             rounded="lg"
