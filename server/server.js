@@ -2,27 +2,17 @@
 const express = require('express');
 const bcrypt = require('bcrypt'); 
 // using bcrypt for now to hash the user's password
-const pgp = require('pg-promise')();
+const { Pool } = require('pg')();
 // usin g pg promise for postgres here
 
 const app = express();
 const PORT = 5000;
 
-// sanjana, can you add credentials here before using it?
-// also, use this query to create the users table for now:
-
-// CREATE TABLE users (
-//   id SERIAL PRIMARY KEY,
-//   username VARCHAR(255) UNIQUE NOT NULL,
-//   email VARCHAR(255) NOT NULL,
-//   password VARCHAR(255) NOT NULL
-// );
-
-const db = pgp('postgres://username:password@localhost:5432/your_database_name');
+const db = pgp('postgres://postgres:Ihtirms#123@localhost:5432/your_database_name');
 app.use(express.json()); // Middleware for parsing JSON data from the request body
 
 app.post('/api/register', async (req, res) => {
-  const { username, password, email } = req.body;
+  const { username, password, email } = req.body;  
   if (!username || !password || !email) {
     return res.json({ success: false, message: 'Please provide all required fields.' });
   }
