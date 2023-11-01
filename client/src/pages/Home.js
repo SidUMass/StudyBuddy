@@ -63,8 +63,8 @@ function Home() {
             </Flex>
             <Flex direction="column" alignItems="center" justifyContent="center">
             {/* Featured courses */}
-
-            <div className="App-Body-Featured">
+            <Box marginRight={"300px"}>
+            
             <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="100px">
                 Featured Courses
             </Text>
@@ -72,7 +72,8 @@ function Home() {
             <Text fontSize ='20px' color='grey'marginBottom="10px">
                 Some of our popular courses
             </Text>
-
+            
+            
 
             <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="400px">
                 Each and every Student is important!
@@ -81,10 +82,11 @@ function Home() {
             <Text fontSize ='20px' color='grey'marginBottom="10px">
                 Check out our Reviews below
             </Text>
-            </div>
+            </Box>
+            
             
             <Box pb="100px"marginRight={"60px"}>
-            <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="400px"textAllign="center"marginLeft={"350px"}>
+            <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="400px"textAllign="center"marginLeft={"320px"}>
                 JOIN US!
             </Text>
            

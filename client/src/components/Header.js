@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import {useState} from 'react';
 import { Box, Text, Button, Stack } from "@chakra-ui/react";
 import {ReactComponent as Logo} from "../logo.svg";
+import Home from '../pages/Home';
+import Courses from '../pages/Courses';
 
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -55,9 +57,9 @@ const MenuLinks = ({ isOpened }) => {
       <Stack spacing={8} align="center" justify={["center", "space-between", "flex-end", "flex-end"]}
       direction={["column", "row", "row", "row"]} pt={[4, 4, 0, 0]}>
         <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/courses"> Courses </MenuItem>
+        <MenuItem to="/courses" ReactComponent={Courses}> Courses </MenuItem>
         <MenuItem to="/profile"> Profile </MenuItem>
-        <MenuItem to="/login" isLast>
+        <MenuItem to="/signup" isLast>
           <Button
             size="sm"
             rounded="lg"
