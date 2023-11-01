@@ -59,7 +59,7 @@ const MenuLinks = ({ isOpened }) => {
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/courses" ReactComponent={Courses}> Courses </MenuItem>
         <MenuItem to="/profile"> Profile </MenuItem>
-        <MenuItem to="/login" isLast>
+        <MenuItem to="/SignUp" isLast>
           <Button
             size="sm"
             rounded="lg"
