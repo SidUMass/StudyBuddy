@@ -10,8 +10,8 @@ const PORT = 5000;
 const pool = new Pool({
   user: 'your_username',
   host: 'localhost',
-  database: 'your_database_name',
-  password: 'your_password',
+  database: 'postgres',
+  password: 'Ihtirms#123',
   port: 5432,
 });
 
@@ -38,4 +38,8 @@ app.post('/api/register', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+app.get('/', (req,res) => {
+  res.send('Connected to server');
 });
