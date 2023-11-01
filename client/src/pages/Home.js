@@ -4,7 +4,7 @@ import { Button, ring } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Input } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
-import { Flex } from '@chakra-ui/react'
+import { Flex, Image } from '@chakra-ui/react'
 
 import { ReactComponent as Fellas } from "../images/fellas.svg";
 import { useState, useEffect } from 'react';
@@ -61,9 +61,9 @@ function Home() {
                     {width >= 1168 && <Fellas />}
                 </Box>
             </Flex>
-            <Flex direction="column" alignItems="center" justifyContent="center">
+        <Flex direction="column" alignItems="center" justifyContent="center">
             {/* Featured courses */}
-            <Box marginRight={"300px"}>
+            <Box>
             
             <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="100px">
                 Featured Courses
@@ -73,6 +73,35 @@ function Home() {
                 Some of our popular courses
             </Text>
             
+            <Flex direction='row' align='center' justifyContent='center' flexWrap='wrap'>
+                <Box flex="1" backgroundColor="white">
+                <Box margin="10px">
+                    <Image src='./images/download.jpeg' alt="Image 1" marginBottom="10px" />
+                    <Text color='skyblue' fontSize="16px">CICS Department</Text>
+                    <Text fontSize="20px">CS 320: Software Engineering</Text>
+                    <Text fontSize="14px">Some info .............</Text>
+                    <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open ></Button>
+                </Box>
+                </Box>
+                <Box flex="1" backgroundColor="white" margin="15px">
+                <Box margin="10px">
+                    <Image src='./images/logo512.png' alt="Image 1" marginBottom="10px" />
+                    <Text color='skyblue' fontSize="16px">CICS Department</Text>
+                    <Text fontSize="20px">CS 320: Software Engineering</Text>
+                    <Text fontSize="14px">Some info .............</Text>
+                    <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open ></Button>
+                </Box>
+                </Box>
+                <Box flex="1" backgroundColor="white" >
+                <Box margin="10px">
+                    <Image src='./images/logo512.png' alt="Image 1" marginBottom="10px" />
+                    <Text color='skyblue' fontSize="16px">CICS Department</Text>
+                    <Text fontSize="20px">CS 320: Software Engineering</Text>
+                    <Text fontSize="14px">Some info .............</Text>
+                    <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open ></Button>
+                </Box>
+                </Box>
+            </Flex>
             
 
             <Text fontSize ='40px' color='white'marginBottom="10px" marginTop="400px">
@@ -82,6 +111,23 @@ function Home() {
             <Text fontSize ='20px' color='grey'marginBottom="10px">
                 Check out our Reviews below
             </Text>
+            <Flex direction='row' align='center' justifyContent='center'>
+                <Box flex="1"  margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
+                    <Image borderRadius="full" boxSize="100px" src="./images/human-face.png" alt="Reviewer 1" marginBottom="10px" />
+                    <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
+                    <Text textAlign="center" color="white" fontSize="12px">Review .......</Text>
+                    <Text  textAlign="center" color="white" fontSize="14px">Name</Text>
+                    <Text textAlign="center" color="white" fontSize="12px">Role</Text>
+                </Box>
+                <Box flex="1"  margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
+                    <Image borderRadius="full" boxSize="100px" src="./images/human-face.png" alt="Reviewer 2" marginBottom="10px" />
+                    <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
+                    <Text textAlign="center" color="white" fontSize="12px">Review .......</Text>
+                    <Text textAlign="center" color="white" fontSize="14px">Name</Text>
+                    <Text textAlign="center" color="white" fontSize="12px">Role</Text>
+                </Box>
+            </Flex>
+
             </Box>
             
             
@@ -105,7 +151,7 @@ function Home() {
             </Box>
             
             
-            </Flex>
+        </Flex>
         </Box>
         
     </body>
