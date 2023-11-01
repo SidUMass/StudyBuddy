@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {useState} from 'react';
 import { Box, Text, Button, Stack } from "@chakra-ui/react";
 import {ReactComponent as Logo} from "../logo.svg";
@@ -45,16 +45,21 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   );
 };
 
+
+
 const MenuLinks = ({ isOpened }) => {
+  const location = useLocation();
   return (
     <Box display={{ base: isOpened ? "block" : "none", md: "block" }} 
     flexBasis={{ base: "100%", md: "auto" }}>
       <Stack spacing={8} align="center" justify={["center", "space-between", "flex-end", "flex-end"]}
       direction={["column", "row", "row", "row"]} pt={[4, 4, 0, 0]}>
-        <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/courses"> Courses </MenuItem>
-        <MenuItem to="/profile"> Profile </MenuItem>
-        <MenuItem to="/login" isLast>
+        
+        <MenuItem to="/"  textDecoration={location.pathname === '/profile' ? 'underline' : 'none'}>Home</MenuItem>
+        <MenuItem to="/courses"  textDecoration={location.pathname === '/profile' ? 'underline' : 'none'}> Courses </MenuItem>
+        <MenuItem to="/profile" textDecoration={location.pathname === '/profile' ? 'underline' : 'none'}> Profile </MenuItem>
+        <MenuItem to="/login"  textDecoration={location.pathname === '/profile' ? 'underline' : 'none'} isLast>
+        
           <Button
             size="sm"
             rounded="lg"
@@ -67,6 +72,7 @@ const MenuLinks = ({ isOpened }) => {
             Login
           </Button>
         </MenuItem>
+        
       </Stack>
     </Box>
   );

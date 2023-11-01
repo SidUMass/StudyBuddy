@@ -35,3 +35,15 @@
 .App-Body{
   background-color: #2F2A36;
 }
+.menu a.active{
+text-decoration: underline;
+
+}
+.App-Body-Featured{
+padding-right:30%;
+
+}
+.Join-us{
+  padding-right:20%;
+  
+  }
