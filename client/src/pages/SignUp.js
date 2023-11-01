@@ -22,7 +22,7 @@ function SignUp() {
     setMessage(''); // Clear any previous messages
     
     try {
-      const response = await fetch('/api/register', {
+      const response = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,8 +43,8 @@ function SignUp() {
 
   return (
     <Box className="signup-container">
-      <Box width="50%" >
-        <Text fontSize="2xl" mb={4}>Sign Up</Text>
+      <Box width="50%" marginLeft={"300px"}>
+        <Text fontSize="5xl" mb={4} marginLeft={"140px"}>Create Account</Text>
         <form onSubmit={handleRegistration}>
           <FormControl className="input-group" mb={4}>
             <FormLabel>Username:</FormLabel>
@@ -79,7 +79,7 @@ function SignUp() {
             />
           </FormControl>
           
-          <Button type="submit" colorScheme="blue">Register</Button>
+          <Button type="submit" bg="#E66F7B" color ="white" width="100%">Register</Button>
         </form>
         {message && <Text mt={4}>{message}</Text>}
       </Box>
