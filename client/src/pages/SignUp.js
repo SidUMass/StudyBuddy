@@ -82,7 +82,7 @@ function SignUp() {
           <Button type="submit" bg="#E66F7B" color ="white" width="100%"marginBottom={"50px"}>Register</Button>
         </form>
         <Text marginLeft={"170px"}fontSize="2xl" mb={4}>Already have an Account?</Text>
-        <Button to="/login"type="login" colorScheme=" blue" color ="white" width="100%">Login</Button>
+        <Button to="/login" type="login" colorScheme=" blue" color ="white" width="100%">Login</Button>
 
         {message && <Text mt={4}>{message}</Text>}
       </Box>
