@@ -28,21 +28,6 @@ pool.connect(err => {
 
 app.use(express.json());
 
-app.get('/api/list-tables', async (req, res) => {
-  try {
-    const result = await pool.query(`
-      SELECT table_name
-      FROM information_schema.tables
-      WHERE table_schema = 'public'
-    `);
-    const tableNames = result.rows.map(row => row.table_name);
-    console.log('Tables:', tableNames);
-    res.json({ success: true, tables: tableNames });
-  } catch (error) {
-    console.error('Error fetching tables:', error);
-    res.json({ success: false, message: 'There was an error fetching the table names.' });
-  }
-});
 
 app.post('/api/register', async (req, res) => {
   const { username, password, email } = req.body;
@@ -60,10 +45,31 @@ app.post('/api/register', async (req, res) => {
   } catch (error) {
     console.error('Error type:', error.constructor.name); // Prints the error type
     console.error('Error message:', error.message); // Prints the error message
-    res.json({ success: false, message: 'There was an error during registration. ' + error.message });
-  /*catch (error) {
     console.error('Error registering user:', error);
-    res.json({ success: false, message: 'There was an error during registration.' });*/
+    res.json({ success: false, message: 'There was an error during registration.' });
+  }
+});
+
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+  if (!username || !password) {
+    return res.json({ success: false, message: 'Please provide all required fields.' });
+  }
+  try {
+    const userQuery = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+    if (userQuery.rows.length === 0) {
+      return res.json({ success: false, message: 'Invalid credentials.' });
+    }
+    const user = userQuery.rows[0];
+    const passwordMatch = await bcrypt.compare(password, user.password);
+    if (passwordMatch) {
+      res.json({ success: true, message: 'Login successful.' });
+    } else {
+      res.json({ success: false, message: 'Invalid credentials.' });
+    }
+  } catch (error) {
+    console.error('Error during login:', error);
+    res.json({ success: false, message: 'There was an error during login.' });
   }
 });
 
