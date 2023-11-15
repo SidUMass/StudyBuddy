@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Box, Input, Button, FormLabel, FormControl, Text } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -9,7 +10,7 @@ function SignUp() {
     email: '',
   });
 
-//   this will send a message to the user
+  // this will send a message to the user
   const [message, setMessage] = useState(''); 
 
   const handleInputChange = (e) => {
@@ -82,7 +83,9 @@ function SignUp() {
           <Button type="submit" bg="#E66F7B" color ="white" width="100%"marginBottom={"50px"}>Register</Button>
         </form>
         <Text marginLeft={"170px"}fontSize="2xl" mb={4}>Already have an Account?</Text>
-        <Button to="/login" type="login" colorScheme=" blue" color ="white" width="100%">Login</Button>
+        <Link to="/login">
+          <Button type="login" colorScheme=" blue" color ="white" width="100%">Login</Button>
+        </Link>
 
         {message && <Text mt={4}>{message}</Text>}
       </Box>
