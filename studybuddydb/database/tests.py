@@ -14,6 +14,13 @@ class CustomUserModelTest(TestCase):
 from django.urls import reverse
 from django.test import TestCase, Client
 
+
+class UserRegistrationFormTest(TestCase):
+    def test_invalid_email(self):
+        form_data = {'username': 'user1', 'email': 'invalidemail', 'password1': 'test123', 'password2': 'test123'}
+        form = CustomUserCreationForm(data=form_data)
+        self.assertFalse(form.is_valid())
+
 class UserRegistrationTest(TestCase):
     def test_user_registration(self):
         response = self.client.post(reverse('register'), {
