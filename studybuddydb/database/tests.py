@@ -14,19 +14,6 @@ class CustomUserModelTest(TestCase):
 from django.urls import reverse
 from django.test import TestCase, Client
 
-# class UserRegistrationTest(TestCase):
-#     def setUp(self):
-#         self.client = Client()
-
-#     def test_user_registration(self):
-#         response = self.client.post(reverse('register'), {
-#             'username': 'newuser',
-#             'password': 'newpassword123',
-#             'email': 'newuser@example.com'
-#         })
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTrue(CustomUser.objects.filter(username='newuser').exists())
-
 class UserRegistrationTest(TestCase):
     def test_user_registration(self):
         response = self.client.post(reverse('register'), {
@@ -34,10 +21,30 @@ class UserRegistrationTest(TestCase):
             'email': 'newuser@example.com',
             'password': 'newpassword123'
         })
-        self.assertEqual(response.status_code, 200)  # Or appropriate status code
+        self.assertEqual(response.status_code, 200)
         self.assertTrue(CustomUser.objects.filter(username='newuser').exists())
 
-        
+class UserLoginTest(TestCase):
+    def setUp(self):
+        self.user = CustomUser.objects.create_user(username='testuser', email='testuser@example.com', password='testpassword123')
+
+    def test_login(self):
+        response = self.client.post(reverse('login_view'), {
+            'username': 'testuser',
+            'password': 'testpassword123',
+        })
+        self.assertEqual(response.status_code, 200)
+
+class UserProfileTest(TestCase):
+    def setUp(self):
+        self.user = CustomUser.objects.create_user(username='testuser', email='testuser@example.com', password='testpassword123')
+        self.client.login(username='testuser', password='testpassword123')
+
+    def test_view_profile(self):
+        response = self.client.get(reverse('profile_view'))  # Replace with your profile view's URL name
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'testuser@example.com')
+
 class CustomUserModelMethodTest(TestCase):
     def setUp(self):
         self.user = CustomUser.objects.create_user(username="testuser", email="test@example.com", password="testpassword123")
