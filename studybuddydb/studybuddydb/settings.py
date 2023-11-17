@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'studybuddydb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Preliminary',
-        'User': 'postgres',
-        'Password': 'Ihtirms#123',
-        'Host': 'localhost',
-        'Port': '5432',
+        'USER': 'postgres',
+        'PASSWORD': 'Ihtirms#123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -131,3 +131,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

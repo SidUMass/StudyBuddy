@@ -1,39 +1,41 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from database.forms import CustomUserCreationForm
+# yourappname/views.py
+from django.shortcuts import render
 from django.http import JsonResponse
+from django.contrib.auth.hashers import make_password, check_password
+from .models import CustomUser
 
 def register(request):
     if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('home')
-    else:
-        form = CustomUserCreationForm()
-    return render(request, 'register.html', {'form': form})
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
 
-def user_profile(request):
+        if not (username and email and password):
+            return JsonResponse({'success': False, 'message': 'Please provide all required fields.'})
+
+        if CustomUser.objects.filter(username=username).exists():
+            return JsonResponse({'success': False, 'message': 'Username already exists.'})
+
+        hashed_password = make_password(password)
+        CustomUser.objects.create(username=username, email=email, password=hashed_password)
+
+        return JsonResponse({'success': True, 'message': 'Registration successful.'})
+    else:
+        return JsonResponse({'success': False, 'message': 'Invalid request method.'})
+
+def login(request):
     if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES, instance=request.user)
-        if form.is_valid():
-            form.save()
-            return redirect('profile')
-    else:
-        form = ProfileForm(instance=request.user)
-    return render(request, 'profile.html', {'form': form})
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
-def login_view(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
+        if not (username and password):
+            return JsonResponse({'success': False, 'message': 'Please provide all required fields.'})
+
+        user = CustomUser.objects.filter(username=username).first()
+
+        if not user or not check_password(password, user.password):
+            return JsonResponse({'success': False, 'message': 'Invalid credentials.'})
+
         return JsonResponse({'success': True, 'message': 'Login successful.'})
     else:
-        return JsonResponse({'success': False, 'message': 'Invalid credentials.'})
-
+        return JsonResponse({'success': False, 'message': 'Invalid request method.'})
