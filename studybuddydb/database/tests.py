@@ -14,19 +14,30 @@ class CustomUserModelTest(TestCase):
 from django.urls import reverse
 from django.test import TestCase, Client
 
-class UserRegistrationTest(TestCase):
-    def setUp(self):
-        self.client = Client()
+# class UserRegistrationTest(TestCase):
+#     def setUp(self):
+#         self.client = Client()
 
+#     def test_user_registration(self):
+#         response = self.client.post(reverse('register'), {
+#             'username': 'newuser',
+#             'password': 'newpassword123',
+#             'email': 'newuser@example.com'
+#         })
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTrue(CustomUser.objects.filter(username='newuser').exists())
+
+class UserRegistrationTest(TestCase):
     def test_user_registration(self):
         response = self.client.post(reverse('register'), {
             'username': 'newuser',
-            'password': 'newpassword123',
-            'email': 'newuser@example.com'
+            'email': 'newuser@example.com',
+            'password': 'newpassword123'
         })
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200)  # Or appropriate status code
         self.assertTrue(CustomUser.objects.filter(username='newuser').exists())
 
+        
 class CustomUserModelMethodTest(TestCase):
     def setUp(self):
         self.user = CustomUser.objects.create_user(username="testuser", email="test@example.com", password="testpassword123")
