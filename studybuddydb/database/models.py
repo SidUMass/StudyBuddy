@@ -13,5 +13,8 @@ class UserProfile(models.Model):
     bio = models.TextField(blank=True)
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
 
+<<<<<<< HEAD
     def __str__(self):
         return self.user.username
+=======
+>>>>>>> ef82b988e6bf949b655e76c98f5da0fb43022d9a
