@@ -30,6 +30,8 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  #origin of your frontend
 ]
+CORS_ALLOW_CREDENTIALS = True
+
 
 CORS_ALLOW_HEADERS = [
     'access-control-allow-headers',
