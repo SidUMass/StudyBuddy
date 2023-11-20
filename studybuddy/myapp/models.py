@@ -19,8 +19,17 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
-
+    first_name = models.CharField(max_length=50, blank=True)
+    last_name = models.CharField(max_length=50, blank=True)
+    avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     objects = CustomUserManager()
 
     def __str__(self):
         return self.username
+
+class Course(models.Model):
+    name = models.CharField(max_length=100)
+    students = models.ManyToManyField(CustomUser, related_name='courses')
+
+    def __str__(self):
+        return self.name
