@@ -23,7 +23,7 @@ function SignUp() {
     setMessage(''); // Clear any previous messages
     
     try {
-      const response = await fetch('http://localhost:5000/api/register', {
+      const response = await fetch('http://localhost:8000/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
