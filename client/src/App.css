@@ -20,7 +20,6 @@
   display: flex;
   list-style-type: none;
   gap: 20px;
-  padding-left: 800px;
 }
 
 .nav-links a {
@@ -30,6 +29,11 @@
 .nav-links :hover {
   text-decoration: none;
   color: #E66F7B;
+}
+
+.header-body {
+  background-color: #2F2A36;
+  padding-left: 50px;
 }
 
 .App-Body{
@@ -42,4 +46,15 @@
   /* padding: top right bottom left; */
   padding: 0 0 30px 30px;
 
+}
+
+.featured-courses-tiles {
+  padding: 30px 100px 0 20px;
+}
+
+.tile-image {
+  margin-bottom: "10px";
+  width: '50px'; 
+  height: '50px';
+  overflow: 'hidden';
 }

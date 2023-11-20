@@ -21,15 +21,17 @@ function App() {
     <Router>
       <ChakraProvider theme={Theme}>
         <div className="App">
-          <Header />
-          {/* Routes */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
+          <div className='header-body'>
+            <Header />
+            {/* Routes */}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/courses" element={<Courses />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </div>
           <Footer /> 
         </div>
       </ChakraProvider>
