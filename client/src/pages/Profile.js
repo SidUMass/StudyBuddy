@@ -91,8 +91,7 @@ function Profile() {
           <Heading>Anna Smith</Heading>
           <Text fontSize="xl">Umass Amherst</Text>
           <Heading mt={5} size="lg">My courses</Heading>
-          <Table variant="simple" mt={5} size="sm" style={{tableLayout: 'auto'}}>
-            
+          <Table variant="simple" mt={5} size="sm" style={{tableLayout: 'auto'}}> 
             <Thead>
               <Tr bg="#463F50" height="50px">
                 <Th borderRight="1px solid black" color="white">Class</Th>
