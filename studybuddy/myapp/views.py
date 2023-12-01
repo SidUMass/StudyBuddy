@@ -5,6 +5,8 @@ import json
 from django.contrib.auth.hashers import make_password, check_password
 from .models import CustomUser  # Import CustomUser model
 
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 @csrf_exempt ##protects against unauthorized actions 
 def register(request):
@@ -42,4 +44,17 @@ def login(request):
 
         return JsonResponse({'success': True, 'message': 'Login successful.'})
 
+
+# this is because login will be required to access profile
+@login_required
+def profile(request):
+    if request.method == 'GET':
+        user = request.user
+        profile_data = {
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'email': user.email,
+            'courses': list(user.courses.values('name'))  # List of courses
+        }
+        return JsonResponse(profile_data)
 
