@@ -46,6 +46,7 @@ def login(request):
 
 
 # this is because login will be required to access profile
+# this also makes the profile data come in the form of jSON objects as shown below.
 @login_required
 def profile(request):
     if request.method == 'GET':
@@ -57,4 +58,5 @@ def profile(request):
             'courses': list(user.courses.values('name'))  # List of courses
         }
         return JsonResponse(profile_data)
+
 

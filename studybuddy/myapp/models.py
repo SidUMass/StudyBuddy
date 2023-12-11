@@ -14,7 +14,6 @@ class CustomUserManager(BaseUserManager):
     def create_superuser(self, username, email, password=None, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
-
         return self.create_user(username, email, password, **extra_fields)
 
 class CustomUser(AbstractUser):
@@ -30,6 +29,6 @@ class CustomUser(AbstractUser):
 class Course(models.Model):
     name = models.CharField(max_length=100)
     students = models.ManyToManyField(CustomUser, related_name='courses')
-
+    # the many to many field helps reflect the relational dbms management system as well.
     def __str__(self):
         return self.name
