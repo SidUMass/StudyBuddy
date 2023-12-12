@@ -61,28 +61,28 @@ function Profile() {
           </Flex>
           <SimpleGrid columns={2} spacing={6} mt={5}>
             <FormControl>
-              <FormLabel>Field 1</FormLabel>
-              <Input defaultValue="Default text for Field 1" />
+              <FormLabel>Username</FormLabel>
+              <Input defaultValue="annasmith" />
             </FormControl>
             <FormControl>
-              <FormLabel>Field 2</FormLabel>
-              <Input defaultValue="Default text for Field 2" />
+              <FormLabel>Name</FormLabel>
+              <Input defaultValue="Anna Smith" />
             </FormControl>
             <FormControl>
-              <FormLabel>Field 3</FormLabel>
-              <Input defaultValue="Default text for Field 3" />
+              <FormLabel>Password</FormLabel>
+              <Input defaultValue="********" />
             </FormControl>
             <FormControl>
-              <FormLabel>Field 4</FormLabel>
-              <Input defaultValue="Default text for Field 4" />
+              <FormLabel>Email Address</FormLabel>
+              <Input defaultValue="sanna@umass.edu" />
             </FormControl>
             <FormControl>
-              <FormLabel>Field 5</FormLabel>
-              <Input defaultValue="Default text for Field 5" />
+              <FormLabel>College</FormLabel>
+              <Input defaultValue="University of Massachusetts Amherst" />
             </FormControl>
             <FormControl>
-              <FormLabel>Field 6</FormLabel>
-              <Input defaultValue="Default text for Field 6" />
+              <FormLabel>Major</FormLabel>
+              <Input defaultValue="Computer Science" />
             </FormControl>
           </SimpleGrid>
         </Box>
@@ -98,19 +98,33 @@ function Profile() {
                 <Th borderRight="1px solid black" color="white">Class</Th>
                 <Th borderRight="1px solid black" color="white">Description</Th>
                 <Th borderRight="1px solid black" color="white">Term</Th>
-                <Th borderRight="1px solid black" color="white">Professor's Name</Th>
+                <Th borderRight="1px solid black" color="white">Professor Name</Th>
                 <Th borderRight="1px solid black" color="white">Number of Students</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr bg="#696076" height="70px">
-                <Td borderRight="1px solid black">Class 1</Td>
-                <Td borderRight="1px solid black">Description 1</Td>
-                <Td borderRight="1px solid black">Term 1</Td>
-                <Td borderRight="1px solid black">Professor's Name 1</Td>
-                <Td borderRight="1px solid black">Number of Students 1</Td>
+                <Td borderRight="1px solid black">CS 320</Td>
+                <Td borderRight="1px solid black">Software Engineering</Td>
+                <Td borderRight="1px solid black">Fall 23</Td>
+                <Td borderRight="1px solid black">Jaime Dávila</Td>
+                <Td borderRight="1px solid black">28</Td>
               </Tr>
               {/* Add more rows as needed */}
+              <Tr bg="#696076" height="70px">
+              <Td borderRight="1px solid black">CS 345</Td>
+              <Td borderRight="1px solid black">Pract & Appl of Data Management</Td>
+              <Td borderRight="1px solid black">Fall 23</Td>
+              <Td borderRight="1px solid black">Gordon Anderson</Td>
+              <Td borderRight="1px solid black">56</Td>
+            </Tr>
+            <Tr bg="#696076" height="70px">
+            <Td borderRight="1px solid black">BIOL 311</Td>
+            <Td borderRight="1px solid black">General Genetics</Td>
+            <Td borderRight="1px solid black">Spring 22</Td>
+            <Td borderRight="1px solid black">Daniel Anderson</Td>
+            <Td borderRight="1px solid black">136</Td>
+          </Tr>
             </Tbody>
           </Table>
         </Box>

@@ -46,25 +46,25 @@ function Courses() {
           <Image src='./images/download.jpeg' alt="Image 1" marginBottom="10px" />
           <Text color='skyblue' fontSize="16px">CICS Department</Text>
           <Text fontSize="20px">CS 320: Software Engineering</Text>
-          <Text fontSize="14px">Some info .............</Text>
+          <Text color='gray' fontSize="14px" maxW="300" maxH="100">Involves defining products, collaborating with customers, ensuring quality, and managing the software.</Text>
+           <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open </Button>
+        </Box>
+        </Box>
+        <Box flex="1" backgroundColor="white" margin="10px">
+        <Box margin="10px">
+          <Image src='./images/logo512.png' alt="Image 1" marginBottom="10px" />
+          <Text color='skyblue' fontSize="16px">Biology Department</Text>
+          <Text fontSize="20px">BIOL 311: General Genetics</Text>
+          <Text color='gray' fontSize="14px" maxW="300" maxH="100">Introduction to genetics including Mendelian and molecular developmental. Examples from a wide variety of organisms. </Text>
           <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open </Button>
         </Box>
         </Box>
         <Box flex="1" backgroundColor="white" margin="10px">
         <Box margin="10px">
           <Image src='./images/logo512.png' alt="Image 1" marginBottom="10px" />
-          <Text color='skyblue' fontSize="16px">CICS Department</Text>
-          <Text fontSize="20px">CS 320: Software Engineering</Text>
-          <Text fontSize="14px">Some info .............</Text>
-          <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open </Button>
-        </Box>
-        </Box>
-        <Box flex="1" backgroundColor="white" margin="10px">
-        <Box margin="10px">
-          <Image src='./images/logo512.png' alt="Image 1" marginBottom="10px" />
-          <Text color='skyblue' fontSize="16px">CICS Department</Text>
-          <Text fontSize="20px">CS 320: Software Engineering</Text>
-          <Text fontSize="14px">Some info .............</Text>
+          <Text color='skyblue' fontSize="16px">English Department</Text>
+          <Text fontSize="20px">ENG 131: Society and Literature</Text>
+          <Text color='gray' fontSize="14px">Introduction to the multifaceted ways literature both shapes and is shaped by its social and historical contexts.</Text>
           <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open </Button>
         </Box>
         </Box>
@@ -72,9 +72,9 @@ function Courses() {
         <Box flex="1" backgroundColor="white" margin="10px">
         <Box margin="10px">
           <Image src='./images/logo512.png' alt="Image 1" marginBottom="10px" />
-          <Text color='skyblue' fontSize="16px">CICS Department</Text>
-          <Text fontSize="20px">CS 320: Software Engineering</Text>
-          <Text fontSize="14px">Some info .............</Text>
+          <Text color='skyblue' fontSize="16px">English Department</Text>
+          <Text fontSize="20px">HIST 100: Western Thought to 1600 </Text>
+          <Text color='gray' fontSize="13.5px">Origins of Western Civilization in the Mediterranean world and its development in Europe to the Protestant Reformation.</Text>
           <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open </Button>
         </Box>
         </Box>

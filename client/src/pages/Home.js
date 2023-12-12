@@ -76,37 +76,47 @@ function Home() {
                     </Text>
 
                     <Flex direction='row' align='center' justifyContent='center' flexWrap='wrap' className='featured-courses-tiles'>
-                        <Box flex="1" backgroundColor="white">
-                            <Box margin="10px">
-                                <Image src={Tile_Default} alt="Image 1" className='tile-image' />
-                                <Text color='skyblue' fontSize="16px">CICS Department</Text>
-                                <Text fontSize="20px">CS 320: Software Engineering</Text>
-                                <Text fontSize="14px">Some info .............</Text>
-                                <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open</Button>
-                            </Box>
+                       <Box flex="1" backgroundColor="white" margin="10px">
+                        <Box margin="10px">
+                          <Image src={Tile_Default} alt="Image 1" className='tile-image' />
+                          <Text color='skyblue' fontSize="16px">CICS Department</Text>
+                          <Text fontSize="20px">CS 320: Software Engineering</Text>
+                          <Text color='gray' fontSize="14px">Involves defining products, collaborating with customers, leading teams, ensuring quality, and managing the software lifecycle.</Text>
+                          <Box display="flex" alignItems="center" marginTop="10px">
+                          </Box>
+                          <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open</Button>
                         </Box>
-                        <Box flex="1" backgroundColor="white" margin="15px">
-                            <Box margin="10px">
-                                <Image src={Tile_Default} alt="Image 1" className='tile-image' />
-                                <Text color='skyblue' fontSize="16px">CICS Department</Text>
-                                <Text fontSize="20px">CS 320: Software Engineering</Text>
-                                <Text fontSize="14px">Some info .............</Text>
-                                <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open</Button>
-                            </Box>
+                      </Box>
+                        <Box flex="1" backgroundColor="white" margin="10px">
+                        <Box margin="10px">
+                          <Image src={Tile_Default} alt="Image 1" className='tile-image' />
+                          <Text color='skyblue' fontSize="16px">Biology Department</Text>
+                          <Text fontSize="20px">BIOL 311: General Genetics</Text>
+                          <Text color='gray' fontSize="14px">Introduction to genetics including Mendelian and molecular developmental. Examples from a wide variety of organisms.</Text>
+                          <Box display="flex" alignItems="center" marginTop="10px">
+                          </Box>
+                          <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open</Button>
                         </Box>
-                        <Box flex="1" backgroundColor="white" >
-                            <Box margin="10px">
-                                <Image src={Tile_Default} alt="Image 1" className='tile-image' />
-                                <Text color='skyblue' fontSize="16px">CICS Department</Text>
-                                <Text fontSize="20px">CS 320: Software Engineering</Text>
-                                <Text fontSize="14px">Some info .............</Text>
-                                <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open</Button>
-                            </Box>
+                      </Box>
+                      <Box flex="1" backgroundColor="white" margin="10px">
+                      <Box margin="10px">
+                        <Image src={Tile_Default} alt="Image 1" className='tile-image' />
+                        <Text color='skyblue' fontSize="16px">English Department</Text>
+                        <Text fontSize="20px">ENG 131: Society and Literature</Text>
+                        <Text color='gray' fontSize="14px">Introduction to the multifaceted ways literature both shapes and is shaped by its social and historical contexts.</Text>
+                        <Box display="flex" alignItems="center" marginTop="10px">
                         </Box>
+                        <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open</Button>
+                      </Box>
+                    </Box>
                     </Flex>
 
 
+<<<<<<< Updated upstream
                     <Text fontSize='40px' color='white' marginBottom="10px" marginTop="100px">
+=======
+                    <Text fontSize='40px' color='white' marginBottom="10px" marginTop="300px">
+>>>>>>> Stashed changes
                         Each and every Student is important!
                     </Text>
 
@@ -114,6 +124,7 @@ function Home() {
                         Check out our Reviews below
                     </Text>
                     <Flex direction='row' align='center' justifyContent='center'>
+<<<<<<< Updated upstream
                         <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">                            
                             <Image src={Rev_1} alt="Image 1" className='rev-image' borderRadius="full" />
                             <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
@@ -127,27 +138,47 @@ function Home() {
                             <Text textAlign="center" color="white" fontSize="12px">"StudyBuddy is great! I greatly enjoy the discussions I engage in with peers."</Text>
                             <Text textAlign="center" color="white" fontSize="14px">–Jason Derulo</Text>
                             <Text textAlign="center" color="white" fontSize="12px">UMass Amherst '19</Text>
+=======
+                        <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
+                            <Image borderRadius="full" boxSize="100px" src="./images/human-face.png" alt="Reviewer 1" marginBottom="10px" />
+                            <Text textAlign="center" color="white" fontSize="12px" maxW="200px">"StudyBuddy transforms my TA role by simplifying communication, fostering collaboration, and streamlining resource sharing, greatly enhancing the teaching experience."</Text>
+                            <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
+                            <Text textAlign="center" color="white" fontSize="14px">Shawn Smith</Text>
+                            <Text textAlign="center" color="white" fontSize="12px">Teaching Assistant</Text>
+                        </Box>
+                        <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
+                            <Image borderRadius="full" boxSize="100px" src="./images/human-face.png" alt="Reviewer 2" marginBottom="10px" />
+                            <Text textAlign="center" color="white" fontSize="12px" maxW="200px">"A game changer, it simplifying communication, fostering collaboration, and streamlining resource sharing, leading to a significantly enhanced learning experience"</Text>
+                            <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
+                            <Text textAlign="center" color="white" fontSize="14px">Regina Miles</Text>
+                            <Text textAlign="center" color="white" fontSize="12px">Student</Text>
+>>>>>>> Stashed changes
                         </Box>
                     </Flex>
                 </Flex>
             </Box>
 
 
+<<<<<<< Updated upstream
             <Box pb="100px" marginRight="60px" className='email-box'>
                 <Text fontSize='40px' color='white' marginBottom="10px" marginTop="100px" textAllign="center" className='title-email-box'>
+=======
+            <Box pb="110px" marginRight={"60px"} textAlign={"center"}>
+                <Text fontSize='40px' color='white' marginBottom="10px" marginTop="400px">
+>>>>>>> Stashed changes
                     JOIN US!
                 </Text>
 
-                <Text fontSize='16px' color='grey' marginBottom="20px" textAllign="center">
-                    Want to join our platform? By entering your email address below, you'll gain
+                <Text fontSize='16px' color='grey' marginBottom="20px" textAlign="center">
+                    Want to join our platform? By entering your email address below, you gain
                     access to an exclusive<br /> opportunity to manage and showcase your college courses.
-                    Take advantage of our platform's powerful<br /> features to organize, promote, and share
-                    your educational journey with the world. <br />We can't wait to see what you bring to the table!
+                    Take advantage of our platform powerful<br /> features to organize, promote, and share
+                    your educational journey with the world. <br />We can not wait to see what you bring to the table!
                 </Text>
 
 
                 <Flex alignItems="center" justifyContent="center">
-                    <Input placeholder="Enter your Email Here" size="lg" style={{ background: 'white' }} />
+                    <Input placeholder="Enter your Email Here" size="lg" style={{ background: 'white',height: '50px'}} />
                     <Button bg="#E66F7B" color="white" size="lg">Submit</Button>
                 </Flex>
             </Box>

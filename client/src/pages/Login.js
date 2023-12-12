@@ -34,32 +34,39 @@ function Login() {
   }
   return (
     <Box className="login-container">
+<<<<<<< Updated upstream
       <Box width="50%" marginLeft={"300px"}>
         <Text fontSize="2xl" mb={4}>Login</Text>
+=======
+      <Box width="50%" >
+        <Text fontSize="3xl" mb={4} color="white">Login</Text>
+>>>>>>> Stashed changes
         <form onSubmit={handleLogin}>
           <FormControl className="input-group" mb={4}>
-            <FormLabel>Username:</FormLabel>
+            <FormLabel color="white">Username:</FormLabel>
             <Input
               type="text"
               name="username"
               placeholder="Username"
               value={formData.username}
+              color="gray"
               onChange={handleInputChange}
             />
           </FormControl>
           <FormControl className="input-group" mb={4}>
-            <FormLabel>Password:</FormLabel>
+            <FormLabel color="white">Password:</FormLabel>
             <Input
               type="password"
               name="password"
               placeholder="Password"
+              color="gray"
               value={formData.password}
               onChange={handleInputChange}
             />
           </FormControl>
           <Button type="submit" colorScheme="blue">Login</Button>
         </form>
-        {message && <Text mt={4}>{message}</Text>}
+        {message && <Text mt={4} color="#E30022">{message}</Text>}
       </Box>
     </Box>
   );

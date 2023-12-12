@@ -55,7 +55,7 @@ function Message() {
               <p>Hi John, how are you?</p>
             </Box>
             <Box borderRadius="lg" backgroundColor="#E4E6EB" p={3} alignSelf="flex-end" maxWidth="70%" mb={3}>
-              <p>I'm good, thanks! How about you?</p>
+              <p>Im good, thanks! How about you?</p>
             </Box>
           </Flex>
           <Textarea placeholder="Type your message..." mt="auto" />
