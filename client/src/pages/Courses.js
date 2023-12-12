@@ -55,7 +55,7 @@ function Courses() {
           <Image src='./images/logo512.png' alt="Image 1" marginBottom="10px" />
           <Text color='skyblue' fontSize="16px">Biology Department</Text>
           <Text fontSize="20px">BIOL 311: General Genetics</Text>
-          <Text color='gray' fontSize="14px" maxW="300" maxH="100">Introduction to genetics including Mendelian and molecular developmental. Examples from a wide variety of organisms. </Text>
+          <Text color='gray' fontSize="14px" maxW="300" maxH="100">Introduction to genetics including Mendelian and molecular developmental. </Text>
           <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open </Button>
         </Box>
         </Box>

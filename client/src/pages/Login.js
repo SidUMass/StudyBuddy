@@ -34,13 +34,8 @@ function Login() {
   }
   return (
     <Box className="login-container">
-<<<<<<< Updated upstream
       <Box width="50%" marginLeft={"300px"}>
         <Text fontSize="2xl" mb={4}>Login</Text>
-=======
-      <Box width="50%" >
-        <Text fontSize="3xl" mb={4} color="white">Login</Text>
->>>>>>> Stashed changes
         <form onSubmit={handleLogin}>
           <FormControl className="input-group" mb={4}>
             <FormLabel color="white">Username:</FormLabel>

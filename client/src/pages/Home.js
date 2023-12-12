@@ -81,7 +81,7 @@ function Home() {
                           <Image src={Tile_Default} alt="Image 1" className='tile-image' />
                           <Text color='skyblue' fontSize="16px">CICS Department</Text>
                           <Text fontSize="20px">CS 320: Software Engineering</Text>
-                          <Text color='gray' fontSize="14px">Involves defining products, collaborating with customers, leading teams, ensuring quality, and managing the software lifecycle.</Text>
+                          <Text color='gray' fontSize="14px">Involves defining products, collaborating with customers, leading teams, ensuring quality, and the software lifecycle.</Text>
                           <Box display="flex" alignItems="center" marginTop="10px">
                           </Box>
                           <Button marginTop="10px" borderRadius="30px" colorScheme="blue" color="skyblue" variant="outline">Open</Button>
@@ -112,11 +112,7 @@ function Home() {
                     </Flex>
 
 
-<<<<<<< Updated upstream
                     <Text fontSize='40px' color='white' marginBottom="10px" marginTop="100px">
-=======
-                    <Text fontSize='40px' color='white' marginBottom="10px" marginTop="300px">
->>>>>>> Stashed changes
                         Each and every Student is important!
                     </Text>
 
@@ -124,48 +120,27 @@ function Home() {
                         Check out our Reviews below
                     </Text>
                     <Flex direction='row' align='center' justifyContent='center'>
-<<<<<<< Updated upstream
-                        <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">                            
-                            <Image src={Rev_1} alt="Image 1" className='rev-image' borderRadius="full" />
-                            <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
-                            <Text textAlign="center" color="white" fontSize="12px">"I love the newfound ease in meeting fellow classmates!"</Text>
-                            <Text textAlign="center" color="white" fontSize="14px">–Anna Smith</Text>
-                            <Text textAlign="center" color="white" fontSize="12px">UMass Amherst '21</Text>
-                        </Box>
                         <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
-                            <Image src={Rev_2} alt="Image 1" className='rev-image' borderRadius="full" />
-                            <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
-                            <Text textAlign="center" color="white" fontSize="12px">"StudyBuddy is great! I greatly enjoy the discussions I engage in with peers."</Text>
-                            <Text textAlign="center" color="white" fontSize="14px">–Jason Derulo</Text>
-                            <Text textAlign="center" color="white" fontSize="12px">UMass Amherst '19</Text>
-=======
-                        <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
-                            <Image borderRadius="full" boxSize="100px" src="./images/human-face.png" alt="Reviewer 1" marginBottom="10px" />
+                            <Image borderRadius="full" className='rev-image' src={Rev_1} alt="Reviewer 1" marginBottom="10px" />
                             <Text textAlign="center" color="white" fontSize="12px" maxW="200px">"StudyBuddy transforms my TA role by simplifying communication, fostering collaboration, and streamlining resource sharing, greatly enhancing the teaching experience."</Text>
                             <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
                             <Text textAlign="center" color="white" fontSize="14px">Shawn Smith</Text>
                             <Text textAlign="center" color="white" fontSize="12px">Teaching Assistant</Text>
                         </Box>
                         <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
-                            <Image borderRadius="full" boxSize="100px" src="./images/human-face.png" alt="Reviewer 2" marginBottom="10px" />
+                            <Image borderRadius="full" className='rev-image' src={Rev_2} alt="Reviewer 2" marginBottom="10px" />
                             <Text textAlign="center" color="white" fontSize="12px" maxW="200px">"A game changer, it simplifying communication, fostering collaboration, and streamlining resource sharing, leading to a significantly enhanced learning experience"</Text>
                             <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
-                            <Text textAlign="center" color="white" fontSize="14px">Regina Miles</Text>
+                            <Text textAlign="center" color="white" fontSize="14px">Tayquan Miles</Text>
                             <Text textAlign="center" color="white" fontSize="12px">Student</Text>
->>>>>>> Stashed changes
                         </Box>
                     </Flex>
                 </Flex>
             </Box>
 
 
-<<<<<<< Updated upstream
             <Box pb="100px" marginRight="60px" className='email-box'>
                 <Text fontSize='40px' color='white' marginBottom="10px" marginTop="100px" textAllign="center" className='title-email-box'>
-=======
-            <Box pb="110px" marginRight={"60px"} textAlign={"center"}>
-                <Text fontSize='40px' color='white' marginBottom="10px" marginTop="400px">
->>>>>>> Stashed changes
                     JOIN US!
                 </Text>
 
