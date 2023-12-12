@@ -50,6 +50,7 @@ function Profile() {
               boxSize="150px"
               src={profileImage}
               alt="Profile"
+              object-fit="cover"
               mr={3}
             />
             <Box>

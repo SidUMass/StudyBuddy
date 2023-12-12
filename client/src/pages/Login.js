@@ -34,7 +34,7 @@ function Login() {
   }
   return (
     <Box className="login-container">
-      <Box width="50%" >
+      <Box width="50%" marginLeft={"300px"}>
         <Text fontSize="2xl" mb={4}>Login</Text>
         <form onSubmit={handleLogin}>
           <FormControl className="input-group" mb={4}>

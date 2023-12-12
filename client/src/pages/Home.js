@@ -8,6 +8,9 @@ import { Flex, Image } from '@chakra-ui/react'
 
 import { ReactComponent as Fellas } from "../images/fellas.svg";
 import Tile_Default from "../images/tile-default.jpeg";
+import Rev_1 from "../images/pic_rev1.jpeg";
+import Rev_2 from "../images/pic_rev2.jpeg";
+
 import { useState, useEffect } from 'react';
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -103,7 +106,7 @@ function Home() {
                     </Flex>
 
 
-                    <Text fontSize='40px' color='white' marginBottom="10px" marginTop="400px">
+                    <Text fontSize='40px' color='white' marginBottom="10px" marginTop="100px">
                         Each and every Student is important!
                     </Text>
 
@@ -111,27 +114,27 @@ function Home() {
                         Check out our Reviews below
                     </Text>
                     <Flex direction='row' align='center' justifyContent='center'>
-                        <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
-                            <Image borderRadius="full" boxSize="100px" src="./images/human-face.png" alt="Reviewer 1" marginBottom="10px" />
+                        <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">                            
+                            <Image src={Rev_1} alt="Image 1" className='rev-image' borderRadius="full" />
                             <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
-                            <Text textAlign="center" color="white" fontSize="12px">Review .......</Text>
-                            <Text textAlign="center" color="white" fontSize="14px">Name</Text>
-                            <Text textAlign="center" color="white" fontSize="12px">Role</Text>
+                            <Text textAlign="center" color="white" fontSize="12px">"I love the newfound ease in meeting fellow classmates!"</Text>
+                            <Text textAlign="center" color="white" fontSize="14px">–Anna Smith</Text>
+                            <Text textAlign="center" color="white" fontSize="12px">UMass Amherst '21</Text>
                         </Box>
                         <Box flex="1" margin="10px" padding="10px" display="flex" flexDirection="column" alignItems="center">
-                            <Image borderRadius="full" boxSize="100px" src="./images/human-face.png" alt="Reviewer 2" marginBottom="10px" />
+                            <Image src={Rev_2} alt="Image 1" className='rev-image' borderRadius="full" />
                             <Text textAlign="center" color="yellow" marginBottom="10px">★★★★★</Text>
-                            <Text textAlign="center" color="white" fontSize="12px">Review .......</Text>
-                            <Text textAlign="center" color="white" fontSize="14px">Name</Text>
-                            <Text textAlign="center" color="white" fontSize="12px">Role</Text>
+                            <Text textAlign="center" color="white" fontSize="12px">"StudyBuddy is great! I greatly enjoy the discussions I engage in with peers."</Text>
+                            <Text textAlign="center" color="white" fontSize="14px">–Jason Derulo</Text>
+                            <Text textAlign="center" color="white" fontSize="12px">UMass Amherst '19</Text>
                         </Box>
                     </Flex>
                 </Flex>
             </Box>
 
 
-            <Box pb="100px" marginRight={"60px"}>
-                <Text fontSize='40px' color='white' marginBottom="10px" marginTop="400px" textAllign="center" marginLeft={"320px"}>
+            <Box pb="100px" marginRight="60px" className='email-box'>
+                <Text fontSize='40px' color='white' marginBottom="10px" marginTop="100px" textAllign="center" className='title-email-box'>
                     JOIN US!
                 </Text>
 
