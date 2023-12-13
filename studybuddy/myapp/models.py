@@ -22,13 +22,17 @@ class CustomUser(AbstractUser):
     last_name = models.CharField(max_length=50, blank=True)
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     objects = CustomUserManager()
+    classes = models.ManyToManyField('Course', related_name='enrolled_students', blank=True)
 
     def __str__(self):
         return self.username
 
 class Course(models.Model):
     name = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
     students = models.ManyToManyField(CustomUser, related_name='courses')
+    students = models.ManyToManyField(CustomUser, related_name='enrolled_courses', blank=True)
+
     # the many to many field helps reflect the relational dbms management system as well.
     def __str__(self):
         return self.name
