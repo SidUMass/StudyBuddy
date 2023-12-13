@@ -10,8 +10,12 @@ import { ReactComponent as Fellas } from "../images/fellas.svg";
 import Tile_Default from "../images/tile-default.jpeg";
 import Rev_1 from "../images/pic_rev1.jpeg";
 import Rev_2 from "../images/pic_rev2.jpeg";
+import { isLoggedIn } from './Login';
 
 import { useState, useEffect } from 'react';
+
+// function
+
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
     return {
@@ -38,6 +42,10 @@ function useWindowDimensions() {
 function Home() {
     let { height, width } = useWindowDimensions();
 
+    if (isLoggedIn) {
+        console.log("Logged in");
+    }
+    
     return (
         <body className="App-Body">
             <Box paddingLeft="50px">

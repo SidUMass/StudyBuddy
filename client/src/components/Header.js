@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {useState} from 'react';
-import { Box, Text, Button, Stack } from "@chakra-ui/react";
+import { Box, Text, Button, Stack, Flex, Icon } from "@chakra-ui/react";
 import {ReactComponent as Logo} from "../logo.svg";
 import Home from '../pages/Home';
 import Courses from '../pages/Courses';
+import { isLoggedIn } from '../pages/Login';
+import { FaUser } from 'react-icons/fa';
+
 
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -48,9 +51,9 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
 };
 
 
-
 const MenuLinks = ({ isOpened }) => {
   const location = useLocation();
+  const username = "John Doe";
   return (
     <Box display={{ base: isOpened ? "block" : "none", md: "block" }} 
     flexBasis={{ base: "100%", md: "auto" }}>
@@ -60,18 +63,26 @@ const MenuLinks = ({ isOpened }) => {
         <MenuItem to="/courses" ReactComponent={Courses}> Courses </MenuItem>
         <MenuItem to="/profile"> Profile </MenuItem>
         <MenuItem to="/signup" isLast>
-          <Button
-            size="sm"
-            rounded="lg"
-            color={["primary.500", "primary.500", "white", "white"]}
-            bg="#E66F7B"
-            _hover={{
-              bg: "#422023"
-            }}
-          >
-            Login
-          </Button>
-        </MenuItem>
+          {isLoggedIn ? (
+            <Flex alignItems="center">
+              <Text color={"white"}>{username}</Text>
+              <Icon as={FaUser} ml={2} color={"white"} />
+              <Text ml={2} color={"white"}>Umass</Text>
+            </Flex>
+          ) : (
+            <Button
+              size="sm"
+              rounded="lg"
+              color={["primary.500", "primary.500", "white", "white"]}
+              bg="#E66F7B"
+              _hover={{
+                bg: "#422023"
+              }}
+            >
+              Login
+            </Button>
+          )}
+        </MenuItem> 
         
       </Stack>
     </Box>

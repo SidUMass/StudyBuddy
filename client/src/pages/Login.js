@@ -1,6 +1,7 @@
 // Login.js
 import React, { useState } from 'react';
 import { Box, Input, Button, FormLabel, FormControl, Text } from "@chakra-ui/react";
+let isLoggedIn = false;
 function Login() {
   const [formData, setFormData] = useState({
     username: '',
@@ -25,6 +26,7 @@ function Login() {
       const data = await response.json();
       if (data.success) {
         setMessage("Login successful");
+        isLoggedIn = true;
       } else {
         setMessage("Error logging in: " + data.message);
       }
@@ -67,6 +69,7 @@ function Login() {
   );
 }
 export default Login;
+export { isLoggedIn };
 
 
 
